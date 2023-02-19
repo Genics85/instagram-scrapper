@@ -5,7 +5,7 @@ const puppeteer=require("puppeteer");
 var config = { username: "genicist__", password: "" };
 
 async function scrapeInstagram(profle,usernameAndPasswordConfig){
-  const browser=await puppeteer.launch({headless:false});
+  const browser=await puppeteer.launch({headless:false,executablePath:"C:/Users/Genics/Documents/chrome-win/chrome.exe"});
   const page=await browser.newPage();
 
   await page.goto("https://www.instagram.com/accounts/login/?source=auth_switcher");
