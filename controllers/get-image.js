@@ -1,9 +1,12 @@
 const scrapeInstagram = require("../config/insta-scrapper");
 
-var config = { username: "genicist__", password: "GenicsInsta" };
+var config = { username: process.env.INSTAGRAM_USERANME, password:process.env.INSTAGRAM_PASSWORD };
 
 const getInstaImages = async (req, res) => {
-  var result = await scrapeInstagram("genicist__", config);
+
+    const {profile}=req.body;
+
+  var result = await scrapeInstagram(profile);
   console.log(typeof result);
   res.send(result);
 };
