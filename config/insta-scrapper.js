@@ -6,7 +6,7 @@ var usernameAndPasswordConfig={
 }
 async function scrapeInstagram(profile) {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     // product:"firefox",
     // executablePath: "C:/Users/Genics/Documents/chrome-win/chrome.exe",
     executablePath: "node_modules/puppeteer/.local-chromium",
