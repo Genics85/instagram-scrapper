@@ -1,7 +1,5 @@
 const scrapeInstagram = require("../config/insta-scrapper");
 
-var config = { username: process.env.INSTAGRAM_USERANME, password:process.env.INSTAGRAM_PASSWORD };
-
 const getInstaImages = async (req, res) => {
 
     const {profile}=req.body;
